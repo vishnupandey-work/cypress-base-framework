@@ -1,0 +1,7 @@
+node_modules
+reports
+screenshots
+1-getting-started
+2-advanced-examples
+cypress/parallel-weights.json
+package-lock.json
