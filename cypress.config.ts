@@ -29,8 +29,9 @@ module.exports = defineConfig({
   trashAssestsBeforeRun: true,
   watchForFileChanges: true,
   projectId: "xmhkmk",
-  "reporter": 'cypress-mochawesome-reporter',
+  "reporter": "cypress-multi-reporters",
   "reporterOptions": {
+    "configFile": "reporter-config.json",
     "autoOpen": true,
     "charts": true,
     "saveJson": true
