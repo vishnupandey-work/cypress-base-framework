@@ -1,5 +1,6 @@
 {
     "reporterOptions": {
+        "reportDir": "reports/mochawesome",
         "charts": true,
         "reportPageTitle": "custom-title",
         "embeddedScreenshots": true,
