@@ -29,10 +29,10 @@ module.exports = defineConfig({
   trashAssestsBeforeRun: true,
   watchForFileChanges: true,
   projectId: "xmhkmk",
-  reporter: 'cypress-mochawesome-reporter',
-  reporterOptions: {
-    autoOpen: true,
-    charts: true,
-    saveJson: true
+  "reporter": 'cypress-mochawesome-reporter',
+  "reporterOptions": {
+    "autoOpen": true,
+    "charts": true,
+    "saveJson": true
   },
 });
