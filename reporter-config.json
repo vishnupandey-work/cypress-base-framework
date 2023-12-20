@@ -1,8 +1,10 @@
 {
-    "reporterEnabled": "mochawesome",
-    "mochawesomeReporterOptions": {
-        "reportDir": "cypress/results/json",
-        "overwrite": false,
+    "reporterOptions": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
         "html": false,
         "json": true
     }

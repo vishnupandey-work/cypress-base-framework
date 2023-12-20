@@ -4,10 +4,13 @@ const fse = require('fs-extra')
 
 module.exports = defineConfig({
   e2e: {
+    reporter: "cypress-mochawesome-reporter",
+    reporterOptions: {
+      configFile: "reporter-config.json",
+    },
     setupNodeEvents(on, config) {
       // implement node event listeners here
       require('cypress-mochawesome-reporter/plugin')(on);
-
       function getConfigurationByFile(filename) {
         const pathToConfigFile = path.resolve('cypress/config', `${filename}.json`)
         return fse.readJSON(pathToConfigFile)
@@ -29,11 +32,4 @@ module.exports = defineConfig({
   trashAssestsBeforeRun: true,
   watchForFileChanges: true,
   projectId: "xmhkmk",
-  "reporter": "mochawesome",
-  "reporterOptions": {
-    "configFile": "reporter-config.json",
-    "autoOpen": true,
-    "charts": true,
-    "saveJson": true
-  },
 });
