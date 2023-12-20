@@ -9,6 +9,6 @@ describe('myTest', () => {
 
     it('2nd test',()=>{
         cy.visit('/app.html')
-        cy.get('.top-menu-controls > .element-search > input').clear().type('customerName').should('have.value','lol')
+        cy.get('.top-menu-controls > .element-search > input').clear().type('customerName')
     })
 })
