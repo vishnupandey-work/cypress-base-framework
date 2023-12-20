@@ -35,5 +35,4 @@ module.exports = defineConfig({
     charts:true,
     saveJson:true
   },
-  baseUrl:"/"
 });
