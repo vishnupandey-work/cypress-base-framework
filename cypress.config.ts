@@ -3,8 +3,6 @@ import * as path from 'path'
 const fse = require('fs-extra')
 
 module.exports = defineConfig({
-  projectId: "xmhkmk",
-  reporter: 'cypress-mochawesome-reporter',
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
@@ -30,5 +28,12 @@ module.exports = defineConfig({
   numTestsKeptInMemory: 10,
   trashAssestsBeforeRun : true,
   watchForFileChanges : true,
-  projectID:"xmhkmk"
+  projectId: "xmhkmk",
+  reporter: 'cypress-mochawesome-reporter',
+  reporterOptions:{
+    autoOpen:true,
+    charts:true,
+    saveJson:true
+  },
+  baseUrl:"/"
 });
