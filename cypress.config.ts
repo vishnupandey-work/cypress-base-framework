@@ -14,10 +14,21 @@ module.exports = defineConfig({
         const pathToConfigFile = path.resolve('cypress/config', `${filename}.json`)
         return fse.readJSON(pathToConfigFile)
       }
-
       const file = config.env.configFile || 'default'
       return getConfigurationByFile(file)
     },
-    specPattern: "cypress/e2e/**/*.spec.ts"
+    specPattern: "cypress/e2e/**/*.spec.ts",
   },
+  viewportWidth: 1366,
+  viewportHeight: 768,
+  retries: {
+    runMode: 1,
+    openMode: 0
+  },
+  defaultCommandTimeout: 4000,
+  execTimeout : 30000,
+  numTestsKeptInMemory: 10,
+  trashAssestsBeforeRun : true,
+  watchForFileChanges : true,
+  projectID:"xmhkmk"
 });
