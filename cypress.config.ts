@@ -1,4 +1,5 @@
 const { defineConfig } = require("cypress");
+const { beforeRunHook, afterRunHook } = require('cypress-mochawesome-reporter/lib');
 import * as path from 'path'
 const fse = require('fs-extra')
 
@@ -10,6 +11,17 @@ module.exports = defineConfig({
     },
     setupNodeEvents(on, config) {
       // implement node event listeners here
+
+      on('before:run', async (details) => {
+        console.log('override before:run');
+        await beforeRunHook(details);
+      });
+
+      on('after:run', async () => {
+        console.log('override after:run');
+        await afterRunHook();
+      });
+
       require('cypress-mochawesome-reporter/plugin')(on);
       function getConfigurationByFile(filename) {
         const pathToConfigFile = path.resolve('cypress/config', `${filename}.json`)
