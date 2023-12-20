@@ -1,5 +1,6 @@
 {
     "reporterOptions": {
+        "mochaFile": "results/my-test-output-[hash].xml",
         "reportDir": "reports/mochawesome",
         "charts": true,
         "reportPageTitle": "custom-title",
@@ -7,6 +8,7 @@
         "inlineAssets": true,
         "saveAllAttempts": false,
         "html": false,
-        "json": true
+        "json": true,
+        "autoOpen": true
     }
 }

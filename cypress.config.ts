@@ -2,13 +2,10 @@ const { defineConfig } = require("cypress");
 const { beforeRunHook, afterRunHook } = require('cypress-mochawesome-reporter/lib');
 import * as path from 'path'
 const fse = require('fs-extra')
+const locale = process.env.SITE_LOCALE;
 
 module.exports = defineConfig({
   e2e: {
-    reporter: "cypress-mochawesome-reporter",
-    reporterOptions: {
-      configFile: "reporter-config.json",
-    },
     setupNodeEvents(on, config) {
       // implement node event listeners here
 
@@ -44,4 +41,11 @@ module.exports = defineConfig({
   trashAssestsBeforeRun: true,
   watchForFileChanges: true,
   projectId: "xmhkmk",
+  "reporterEnabled": "mochawesome, mocha-junit-reporter",
+  "mochawesomeReporterOptions": {
+    "reportDir": `.reports/${locale}`
+  },
+  "mochaJunitReporterReporterOptions": {
+    "mochaFile": `./junit/${locale}/[hash].xml`
+  },
 });
