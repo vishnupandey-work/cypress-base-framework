@@ -24,16 +24,15 @@ module.exports = defineConfig({
     openMode: 0
   },
   defaultCommandTimeout: 4000,
-  execTimeout : 30000,
+  execTimeout: 30000,
   numTestsKeptInMemory: 10,
-  trashAssestsBeforeRun : true,
-  watchForFileChanges : true,
+  trashAssestsBeforeRun: true,
+  watchForFileChanges: true,
   projectId: "xmhkmk",
-/*  reporter: 'cypress-mochawesome-reporter',
-  reporterOptions:{
-    autoOpen:true,
-    charts:true,
-    saveJson:true
+  reporter: 'cypress-mochawesome-reporter',
+  reporterOptions: {
+    autoOpen: true,
+    charts: true,
+    saveJson: true
   },
- */ 
 });
