@@ -7,8 +7,9 @@
       "dom"
     ],
     "types": [
+      "node",
       "cypress",
-      "node"
+      "cypress-mochawesome-reporter"
     ]
   },
   "include": [
