@@ -5,3 +5,4 @@ screenshots
 2-advanced-examples
 cypress/parallel-weights.json
 package-lock.json
+mochawesome-report

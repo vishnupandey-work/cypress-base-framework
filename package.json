@@ -4,9 +4,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cy:run": "npx cypress run --reporter mochawesome",
+    "cy:run": "npx cypress run",
     "cy:parallel": "cypress-parallel -s cy:run -t 4 -d 'cypress/e2e' -a '\"\"'",
-    "cy:cloud": "npx cypress run --record --key dcb96a11-03a2-4595-b31e-c02f84d56926 --parallel --reporter mochawesome"
+    "cy:cloud": "npx cypress run --key dcb96a11-03a2-4595-b31e-c02f84d56926",
+    "cy:cloud:record": "npx cypress run --record --key dcb96a11-03a2-4595-b31e-c02f84d56926"
   },
   "keywords": [],
   "author": "vishnu pandey",
@@ -15,6 +16,7 @@
     "cypress": "^13.6.1",
     "cypress-mochawesome-reporter": "^3.7.0",
     "fs-extra": "^11.2.0",
+    "node": "^21.2.0",
     "typescript": "^5.3.3"
   },
   "description": ""
