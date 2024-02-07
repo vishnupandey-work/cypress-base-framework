@@ -31,11 +31,11 @@ module.exports = defineConfig({
   projectId: "xmhkmk",
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
-    charts: true,
+    charts: false,
     reportPageTitle: 'Cypress Test Report',
     embeddedScreenshots: true,
     inlineAssets: true,
     saveAllAttempts: false,
-    autoOpen:true
+    autoOpen:false
   }
 });
