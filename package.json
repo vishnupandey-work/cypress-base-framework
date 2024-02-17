@@ -8,7 +8,8 @@
     "cy:parallel": "cypress-parallel -s cy:run -t 4 -d 'cypress/e2e' -a '\"\"'",
     "cy:cloud": "npx cypress run --key dcb96a11-03a2-4595-b31e-c02f84d56926",
     "cy:cloud:record": "npx cypress run --record --key dcb96a11-03a2-4595-b31e-c02f84d56926",
-    "cy:run:docker":"docker run -it -v $PWD:/e2e -w /e2e --entrypoint=cypress cypress/included:13.6.4 run --config-file cypress.config.ts --browser chrome"
+    "cy:run:docker":"docker run -v $PWD:/e2e -w /e2e --entrypoint=cypress cypress/included:13.6.4 run --config-file cypress.config.ts --browser chrome",
+    "docker:parallel:cloud":"npm run cy:run:docker --parallel --record --key dcb96a11-03a2-4595-b31e-c02f84d56926"
   },
   "keywords": [],
   "author": "vishnu pandey",
