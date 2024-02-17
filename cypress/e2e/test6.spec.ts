@@ -1,13 +1,13 @@
-describe('myTest', () => {
+describe('suite6', () => {
 
-    it('firstTest', () => {
+    it('test6.1', () => {
         cy.visit('/')
         cy.get('#username').clear().type('dummyUser')
         cy.get('#password').clear().type('dummyPassword')
         cy.get('#log-in').click()
     })
 
-    it('2nd test',()=>{
+    it('test6.2',()=>{
         cy.visit('/app.html')
         cy.get('.top-menu-controls > .element-search > input').clear().type('customerName')
     })
