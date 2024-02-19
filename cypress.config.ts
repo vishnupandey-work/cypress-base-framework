@@ -36,6 +36,7 @@ module.exports = defineConfig({
     embeddedScreenshots: true,
     inlineAssets: true,
     saveAllAttempts: false,
-    autoOpen:false
+    autoOpen:false,
+    reportDir: "cypress/reports/mochawesome-report",
   }
 });
