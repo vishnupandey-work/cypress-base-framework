@@ -1,0 +1,47 @@
+def jobs = ["JobA", "JobB", "JobC"]
+ 
+def parallelStagesMap = jobs.collectEntries {
+    ["${it}" : generateStage(it)]
+}
+ 
+def generateStage(job) {
+    return {
+        stage("stage: ${job}") {
+                echo "This is ${job}."
+                sh '''
+                cd cypress-base-framework
+                npm run docker:parallel:cloud
+                '''
+        }
+    }
+}
+
+
+pipeline {
+    agent any
+    stages {
+        stage('clone/pull'){
+            steps{
+                sh '''
+                #!/bin/sh
+                if cd cypress-base-framework; then git pull; else git clone https://github.com/vishnupandey-work/cypress-base-framework.git cypress-base-framework; fi
+                whoami
+                '''
+                sh '''
+                cd cypress-base-framework
+                git branch --remote
+                git checkout -B main
+                git pull
+                npm install
+                '''
+            }
+        }
+        stage('Test') {
+            steps {
+                script {
+                    parallel parallelStagesMap
+                }
+            }
+        }
+    }
+}
