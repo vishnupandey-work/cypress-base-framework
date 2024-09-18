@@ -15,7 +15,7 @@
   "author": "vishnu pandey",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.11.0",
+    "cypress": "^13.14.2",
     "cypress-mochawesome-reporter": "^3.7.0",
     "fs-extra": "^11.2.0",
     "node": "^21.2.0",
