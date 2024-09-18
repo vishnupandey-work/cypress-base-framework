@@ -9,7 +9,6 @@
     "types": [
       "node",
       "cypress",
-      "cypress-mochawesome-reporter"
     ]
   },
   "include": [

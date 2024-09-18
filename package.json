@@ -8,14 +8,14 @@
     "cy:parallel": "cypress-parallel -s cy:run -t 4 -d 'cypress/e2e' -a '\"\"'",
     "cy:cloud": "npx cypress run --key dcb96a11-03a2-4595-b31e-c02f84d56926",
     "cy:cloud:record": "npx cypress run --record --key dcb96a11-03a2-4595-b31e-c02f84d56926",
-    "cy:run:docker":"docker run -v $PWD:/e2e -w /e2e --entrypoint=cypress cypress/included:13.6.4 run --config-file cypress.config.ts --browser chrome",
-    "docker:parallel:cloud":"docker run -v $PWD:/e2e -w /e2e --entrypoint=cypress cypress/included:13.6.4 run --config-file cypress.config.ts --browser chrome --parallel --record --key dcb96a11-03a2-4595-b31e-c02f84d56926 --ci-build-id $BUILD_NUMBER"
+    "cy:run:docker": "docker run -v $PWD:/e2e -w /e2e --entrypoint=cypress cypress/included:13.6.4 run --config-file cypress.config.ts --browser chrome",
+    "docker:parallel:cloud": "docker run -v $PWD:/e2e -w /e2e --entrypoint=cypress cypress/included:13.6.4 run --config-file cypress.config.ts --browser chrome --parallel --record --key dcb96a11-03a2-4595-b31e-c02f84d56926 --ci-build-id $BUILD_NUMBER"
   },
   "keywords": [],
   "author": "vishnu pandey",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.6.1",
+    "cypress": "^13.11.0",
     "cypress-mochawesome-reporter": "^3.7.0",
     "fs-extra": "^11.2.0",
     "node": "^21.2.0",

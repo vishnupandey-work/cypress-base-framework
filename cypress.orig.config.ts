@@ -7,7 +7,7 @@ module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
-      //require('cypress-mochawesome-reporter/plugin')(on);
+      require('cypress-mochawesome-reporter/plugin')(on);
       function getConfigurationByFile(filename) {
         const pathToConfigFile = path.resolve('cypress/config', `${filename}.json`)
         return fse.readJSON(pathToConfigFile)
@@ -29,4 +29,14 @@ module.exports = defineConfig({
   trashAssestsBeforeRun: true,
   watchForFileChanges: true,
   projectId: "xmhkmk",
+  reporter: 'cypress-mochawesome-reporter',
+  reporterOptions: {
+    charts: false,
+    reportPageTitle: 'Cypress Test Report',
+    embeddedScreenshots: true,
+    inlineAssets: true,
+    saveAllAttempts: false,
+    autoOpen:false,
+    reportDir: "cypress/reports/mochawesome-report",
+  }
 });
