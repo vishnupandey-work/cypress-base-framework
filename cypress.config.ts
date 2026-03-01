@@ -28,5 +28,6 @@ module.exports = defineConfig({
   numTestsKeptInMemory: 10,
   trashAssestsBeforeRun: true,
   watchForFileChanges: true,
+  allowCypressEnv: false, //added to prevent cypress from overriding env variables in config file
   projectId: "xmhkmk",
 });

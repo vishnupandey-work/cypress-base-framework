@@ -11,4 +11,9 @@ describe('suite1', () => {
         cy.visit('/app.html')
         cy.get('.top-menu-controls > .element-search > input').clear().type('customerName')
     })
+
+    it('test1.2',()=>{
+        cy.visit('http://www.amazon.in')
+        //cy.get('.top-menu-controls > .element-search > input').clear().type('customerName')
+    })
 })
